@@ -475,6 +475,11 @@ figure {
   margin-top: 9rem;
 }
 
+.hopeful-year {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
 .hopeful-releases strong {
   font-size: 1.2rem;
 }
@@ -554,10 +559,12 @@ figure {
   margin-bottom: 4rem;
 }
 
-.contact-details p {
+.contact-details .contact-email {
   margin-bottom: 2rem;
   font-family: var(--serif);
   font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: none;
 }
 
 .contact-details a {
