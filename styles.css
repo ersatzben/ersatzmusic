@@ -91,7 +91,7 @@ figure {
 .header-mark {
   font-family: var(--serif);
   font-size: 1.5rem;
-  font-style: italic;
+  /* font-style: italic; */
   opacity: 0;
   transition: opacity 200ms ease;
 }
@@ -214,7 +214,7 @@ figure {
 .hero-release h2 {
   margin: 0.45rem 0 1.2rem;
   font-family: var(--serif);
-  font-size: 4.4rem;
+  font-size: 5.4rem;
   font-weight: 400;
   line-height: 0.86;
 }
@@ -258,7 +258,7 @@ figure {
 .introduction-copy h2 {
   max-width: 16ch;
   font-family: var(--serif);
-  font-size: 5.2rem;
+  font-size: 5.0rem;
   font-weight: 400;
   line-height: 0.98;
 }
@@ -266,7 +266,7 @@ figure {
 .introduction-copy > p {
   max-width: 33rem;
   margin: 3rem 0 0 auto;
-  font-size: 1.1rem;
+  font-size: 1.7rem;
 }
 
 .section-heading {
@@ -610,7 +610,7 @@ figure {
 .words-header a:first-child {
   font-family: var(--serif);
   font-size: 1.5rem;
-  font-style: italic;
+  /* font-style: italic; */
   font-weight: 400;
   text-transform: none;
 }
@@ -676,6 +676,10 @@ figure {
 .verse-indent {
   display: inline-block;
   margin-left: 2rem;
+}
+
+.lyric-text.small { 
+  font-variant: small-caps; 
 }
 
 .lyric-credit {
