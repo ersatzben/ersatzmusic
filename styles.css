@@ -587,6 +587,19 @@ figure {
   text-transform: uppercase;
 }
 
+.artist-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 13rem;
+}
+
+.artist-links a {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
 .copyright {
   position: absolute;
   right: 3vw;
