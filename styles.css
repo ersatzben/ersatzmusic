@@ -231,6 +231,13 @@ figure {
   text-transform: uppercase;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 1.75rem;
+  align-items: flex-start;
+}
+
 .hero-scroll {
   right: 2.2rem;
   bottom: 2.2rem;
@@ -350,6 +357,11 @@ figure {
   flex-direction: column;
   gap: 1.25rem;
   align-items: flex-start;
+  width: 8.25rem;
+}
+
+.release-links .text-link {
+  width: 100%;
 }
 
 .release-hints .release-art {
@@ -1098,6 +1110,12 @@ figure {
 
   .project-list a {
     font-size: 1.28rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact-details .contact-email {
+    font-size: 1.55rem;
   }
 }
 

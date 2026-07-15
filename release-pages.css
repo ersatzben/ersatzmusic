@@ -1,0 +1,444 @@
+:root {
+  --album-field: #aebbd4;
+  --album-field-text: #11100d;
+  --album-paper: #f4f1e8;
+}
+
+.album-page {
+  background: var(--album-paper);
+}
+
+.album-until {
+  --album-field: #aebbd4;
+}
+
+.album-hints {
+  --album-field: #7f3825;
+  --album-field-text: #f4f1e8;
+}
+
+.album-amateur {
+  --album-field: #b1bdd4;
+}
+
+.album-lydia {
+  --album-field: #e9e5da;
+}
+
+.album-in {
+  --album-field: #d8d0c0;
+}
+
+.album-header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 5rem;
+  padding: 0 2.5rem;
+  font-size: 0.72rem;
+  font-weight: 650;
+  text-transform: uppercase;
+}
+
+.album-header > a:first-child {
+  color: var(--album-field-text);
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.album-header > a:last-child {
+  border-bottom: 1px solid currentColor;
+}
+
+.album-layout {
+  display: grid;
+  grid-template-columns: minmax(28rem, 47vw) minmax(0, 1fr);
+  align-items: start;
+}
+
+.album-art-panel {
+  position: sticky;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 7.5rem 4rem 5rem;
+  color: var(--album-field-text);
+  background: var(--album-field);
+}
+
+.album-cover {
+  width: min(100%, 31rem);
+  margin: 0;
+}
+
+.album-cover img {
+  width: 100%;
+  box-shadow: 0 1.2rem 3.5rem rgba(17, 16, 13, 0.17);
+}
+
+.album-cover figcaption {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 0.66rem;
+  font-weight: 650;
+  text-transform: uppercase;
+}
+
+.album-content {
+  min-width: 0;
+  background: var(--album-paper);
+}
+
+.album-intro,
+.album-section,
+.album-pagination {
+  padding-right: clamp(3rem, 7vw, 7rem);
+  padding-left: clamp(3rem, 7vw, 7rem);
+}
+
+.album-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: min(82vh, 54rem);
+  padding-top: 9rem;
+  padding-bottom: 7rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.album-kicker,
+.album-section-label,
+.credit-list dt,
+.pagination-direction {
+  font-size: 0.67rem;
+  font-weight: 650;
+  text-transform: uppercase;
+}
+
+.album-intro h1 {
+  max-width: 8.5ch;
+  margin: 1.1rem 0 2.5rem;
+  font-family: var(--serif);
+  font-size: 5.3rem;
+  font-weight: 400;
+  line-height: 0.88;
+}
+
+.album-intro h1.album-long-title {
+  max-width: none;
+  font-size: 4.15rem;
+}
+
+.album-intro h1.album-title-single {
+  max-width: none;
+  white-space: nowrap;
+}
+
+.album-long-title .long-word {
+  font-size: 0.73em;
+}
+
+.album-catalogue {
+  margin-top: -1.2rem;
+  margin-bottom: 2.5rem;
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.album-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 1.75rem;
+  align-items: flex-start;
+}
+
+.album-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.album-section h2 {
+  margin: 0.65rem 0 3rem;
+  font-family: var(--serif);
+  font-size: 3.8rem;
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.track-list {
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--ink);
+  list-style: none;
+}
+
+.track-list li {
+  display: grid;
+  grid-template-columns: 2.4rem minmax(0, 1fr) auto;
+  gap: 0.8rem;
+  align-items: baseline;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.track-number,
+.track-time {
+  font-size: 0.7rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.track-title {
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  line-height: 1.3;
+}
+
+.credit-list {
+  margin: 0;
+  border-top: 1px solid var(--ink);
+}
+
+.credit-list > div {
+  display: grid;
+  grid-template-columns: minmax(7rem, 0.8fr) minmax(0, 2.2fr);
+  gap: 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.credit-list dt,
+.credit-list dd {
+  margin: 0;
+}
+
+.credit-list dd {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+
+@media (min-width: 761px) {
+  .credit-list dt {
+    padding-top: 5px;
+  }
+}
+
+.liner-note {
+  max-width: 30rem;
+  margin-left: auto;
+  padding: 3rem 0 1rem;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.liner-note + .liner-note {
+  margin-top: 3rem;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.liner-note h3 {
+  margin: 0 0 2.2rem;
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.liner-lyrics {
+  padding-bottom: 2.5rem;
+  font-family: var(--serif);
+  font-size: 1.18rem;
+  line-height: 1.85;
+}
+
+.album-pagination {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: center;
+  align-items: start;
+  min-height: 18rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.album-pagination a {
+  align-self: start;
+}
+
+.album-pagination a:last-child {
+  text-align: right;
+}
+
+.pagination-title {
+  display: block;
+  margin-top: 0.5rem;
+  font-family: var(--serif);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.pagination-long-word {
+  display: block;
+  font-size: 0.68em;
+}
+
+@media (max-width: 980px) {
+  .album-layout {
+    grid-template-columns: minmax(22rem, 44vw) minmax(0, 1fr);
+  }
+
+  .album-art-panel {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
+
+  .album-intro,
+  .album-section,
+  .album-pagination {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
+
+  .album-intro h1 {
+    font-size: 4.3rem;
+  }
+
+  .album-intro h1.album-long-title {
+    font-size: 3.1rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .album-header {
+    position: absolute;
+    min-height: 4.5rem;
+    padding: 0 1.25rem;
+    color: var(--album-field-text);
+  }
+
+  .album-layout {
+    display: block;
+  }
+
+  .album-art-panel {
+    position: relative;
+    min-height: 86vh;
+    min-height: 86svh;
+    padding: 6.5rem 2rem 3.5rem;
+  }
+
+  .album-cover {
+    width: min(100%, 27rem);
+  }
+
+  .album-intro,
+  .album-section,
+  .album-pagination {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  .album-intro {
+    min-height: 0;
+    padding-top: 5.5rem;
+    padding-bottom: 5.5rem;
+  }
+
+  .album-intro h1,
+  .album-intro h1.album-long-title {
+    max-width: 9ch;
+    margin-bottom: 2rem;
+    font-size: 3.8rem;
+  }
+
+  .album-intro h1.album-long-title {
+    max-width: 10ch;
+    font-size: 3.05rem;
+  }
+
+  .album-intro h1.album-title-single {
+    max-width: none;
+  }
+
+  .album-long-title .long-word {
+    font-size: 0.76em;
+  }
+
+  .album-section {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .album-section h2 {
+    margin-bottom: 2.4rem;
+    font-size: 3.2rem;
+  }
+
+  .track-list li {
+    grid-template-columns: 1.8rem minmax(0, 1fr) auto;
+    gap: 0.55rem;
+  }
+
+  .track-title {
+    font-size: 1rem;
+  }
+
+  .credit-list > div {
+    display: block;
+  }
+
+  .credit-list dt {
+    margin-bottom: 0.35rem;
+  }
+
+  .liner-note {
+    margin-left: 0;
+  }
+
+  .album-pagination {
+    min-height: 14rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .pagination-title {
+    font-size: 1.45rem;
+  }
+
+  .pagination-long-word {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 390px) {
+  .album-intro h1,
+  .album-intro h1.album-long-title {
+    font-size: 2.85rem;
+  }
+
+  .album-intro h1.album-title-single {
+    font-size: 2.55rem;
+  }
+
+  .album-long-title .long-word {
+    font-size: 0.67em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
